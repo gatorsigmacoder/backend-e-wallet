@@ -28,7 +28,19 @@ REDIS_PORT=6379
 
 sesuaikan dengan settingan pada lokal masing-masing.
 
-2. Jika sudah maka selanjutnya bisa menjalankan perintah berikut.
+2. Kemudian jalankan perintah berikut.
+
+```
+pnpm install
+```
+
+atau
+
+```
+npm install
+```
+
+3. Jika sudah maka selanjutnya bisa menjalankan perintah berikut.
 
 ```
 pnpm run db:init
@@ -40,7 +52,7 @@ atau
 npm run db:init
 ```
 
-3. Kemudian jika berhasil jalankan perintah selanjutnya.
+4. Kemudian jika berhasil jalankan perintah selanjutnya.
 
 ```
 pnpm run db:migrate
@@ -52,8 +64,8 @@ atau
 npm run db:migrate
 ```
 
-4. Jika migrate tidak berhasil, saya sediakan backup database postgresql nya.
-5. Kemudian jalankan perintah-perintah berikut.
+5. Jika migrate tidak berhasil, saya sediakan backup database postgresql nya.
+6. Kemudian jalankan perintah-perintah berikut.
 
 ```
 pnpm run dev

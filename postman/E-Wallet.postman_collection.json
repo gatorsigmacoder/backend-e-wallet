@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "facbd903-83a3-403f-bf7d-d76e2755f121",
+		"name": "E-Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37536108",
+		"_collection_link": "https://www.postman.com/api-penomoran/workspace/dzx0axqgkd/collection/37536108-facbd903-83a3-403f-bf7d-d76e2755f121?action=share&source=collection_link&creator=37536108"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "toriq",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tariqrojaabdullah@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Password123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}auth/register",
+							"host": [
+								"{{baseUrl}}auth"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATED",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "toriq 2",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "tariqrojaabdullah@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "@Password123",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+6285123123123",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Cikole",
+											"type": "text"
+										},
+										{
+											"key": "bio",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}auth/register",
+									"host": [
+										"{{baseUrl}}auth"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-zAg9hvzg+9zToGJ4GppIRAGooQc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 14:04:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"success\": true,\n    \"message\": \"Created\",\n    \"data\": {\n        \"email\": \"tariqrojaabdullah@gmail.com\",\n        \"name\": \"toriq 2\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const data = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"token\", data.data.access_token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "toriqra12@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Password123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}auth/login",
+							"host": [
+								"{{baseUrl}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "toriqra12@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "@Password123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}auth/login",
+									"host": [
+										"{{baseUrl}}auth"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-9RthBNCiIQjniFJUyDIfIEZIGqY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 16:48:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxOTE4ZGJlLTdhN2QtNGQ4Mi1iYzIxLWUzMWQ4YTkxMzQ0NiIsImVtYWlsIjoidG9yaXFyYTEyQGdtYWlsLmNvbSIsImlhdCI6MTc2ODA2MzczOCwiZXhwIjoxNzY4MDY3MzM4fQ.13XyJG2nnC1GwzTEBb7gGJxvEx8XD6gTICGfeThwOCs\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Top Up",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"+6285123123122\",\r\n    \"amount\" : 25000.437\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}transaction/topup",
+							"host": [
+								"{{baseUrl}}transaction"
+							],
+							"path": [
+								"topup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone_sender\" : \"+6285123123122\",\r\n    \"phone_receiver\" : \"+6285123123123\",\r\n    \"amount\" : 15500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}transaction/transfer",
+							"host": [
+								"{{baseUrl}}transaction"
+							],
+							"path": [
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}users",
+							"host": [
+								"{{baseUrl}}users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

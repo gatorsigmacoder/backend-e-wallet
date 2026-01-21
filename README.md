@@ -14,7 +14,7 @@ JWT_ACCESS_EXPIRES_IN=3600
 
 NODE_ENV=development
 
-APP_PORT=3000 #port APInya
+APP_PORT=3000 #port API
 APP_NAME="E-Wallet"
 
 MAIL_HOST="sandbox.smtp.mailtrap.io"

@@ -1,4 +1,4 @@
-### GUIDE TO RUN THE APP
+### GUIDE TO RUN THE APP 👍
 
 1. Copy env berikut:
 
